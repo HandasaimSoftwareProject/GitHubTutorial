@@ -20,8 +20,13 @@ namespace GitHubTestProject
         /// <returns></returns>
         public static bool IsPrime(int n)
         {
-            // TODO: Complete fhe funtion
-            return n % 2 != 0;
+           
+
+            for (int i = 2; i < n; i++)
+            {
+                if (n % i == 0) { return false; }
+            }
+            return true;
         }
 
         /// <summary>
@@ -31,6 +36,10 @@ namespace GitHubTestProject
         public static void Sort(int[] a)
         {
             // TODO: Complete fhe funtion
+            int len=a.Length,temp;
+
+            Array.Sort(a);
+
         }
 
         /// <summary>
@@ -49,7 +58,17 @@ namespace GitHubTestProject
                 return 4;
             if (a == 3)
                 return 7;
-            return 1000;
+            int sum = 13, first_last_sum = 7,second_last_sum=4,third_last_sum=2;
+            for (int i = 3; i < a; i++)
+            {
+                sum = first_last_sum+second_last_sum+third_last_sum;
+                third_last_sum = second_last_sum;
+                second_last_sum = first_last_sum;
+                first_last_sum = sum;
+                
+                
+            }
+            return sum;
         }
     }
 }
