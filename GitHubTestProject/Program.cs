@@ -64,7 +64,7 @@ namespace GitHubTestProject
                 return 4;
             if (a == 3)
                 return 7;
-            return 1000;
+            return CountVectors(a-1) + CountVectors(a-2) + CountVectors(a-3);
         }
     }
 }
