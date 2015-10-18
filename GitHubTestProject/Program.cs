@@ -11,6 +11,7 @@ namespace GitHubTestProject
         {
             Console.WriteLine("Hello Github!");
             Console.WriteLine("Please complete the following functions and initate a pull request.");
+            Sort(new int[] { 8, 2, 58, 34, 153, 4 });
         }
 
         /// <summary>
@@ -21,16 +22,30 @@ namespace GitHubTestProject
         public static bool IsPrime(int n)
         {
             // TODO: Complete fhe funtion
-            return n % 2 != 0;
+            //credit to @denis 
+            if (n != 2)
+            {
+                for (int i = 2; i < n; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+                return true;
         }
 
         /// <summary>
         /// Sorts a given integer array
         /// </summary>
         /// <param name="a">An integer array</param>
-        public static void Sort(int[] a)
+        public static void Sort( int[] a)
         {
             // TODO: Complete fhe funtion
+            Array.Sort(a);
         }
 
         /// <summary>
@@ -49,7 +64,7 @@ namespace GitHubTestProject
                 return 4;
             if (a == 3)
                 return 7;
-            return 1000;
+            return CountVectors(a-1) + CountVectors(a-2) + CountVectors(a-3);
         }
     }
 }
