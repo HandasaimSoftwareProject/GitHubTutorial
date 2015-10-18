@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Text; /*
+using System.Of[A].Down; */
 
 namespace GitHubTestProject
 {
@@ -21,7 +22,18 @@ namespace GitHubTestProject
         public static bool IsPrime(int n)
         {
             // TODO: Complete fhe funtion
-            return n % 2 != 0;
+            //ctrl r+ a
+            int a = (int)(Math.Sqrt(n));
+            for (int i = 2; i <=a; i++ )
+            {
+                if((n%i==0)&(i!=n))
+                {
+                    return false;
+                    
+                }
+
+            }
+            return true;
         }
 
         /// <summary>
@@ -30,7 +42,7 @@ namespace GitHubTestProject
         /// <param name="a">An integer array</param>
         public static void Sort(int[] a)
         {
-            // TODO: Complete fhe funtion
+            Array.Sort(a);
         }
 
         /// <summary>
@@ -43,13 +55,19 @@ namespace GitHubTestProject
         /// <returns>The number of sequences</returns>
         public static int CountVectors(int a)
         {
-            if (a == 1)
-                return 2;
-            if (a == 2)
-                return 4;
-            if (a == 3)
-                return 7;
-            return 1000;
+            if (a / 1000 < 0)
+            {
+                return (0);
+            }
+            if (a / 1000 == 0)
+            {
+                return(1);
+            }
+            else
+            {
+               return((CountVectors(a/10))+(CountVectors(a/100))+(CountVectors(a/1000))); 
+            }
+           
         }
     }
 }
