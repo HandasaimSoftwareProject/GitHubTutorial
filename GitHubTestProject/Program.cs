@@ -20,8 +20,13 @@ namespace GitHubTestProject
         /// <returns></returns>
         public static bool IsPrime(int n)
         {
-            // TODO: Complete fhe funtion
-            return n % 2 != 0;
+            int cnt =0;
+            if (n == 1 || n == 0) return false;
+            for (int i = 2; i < n; i++)
+            {
+                if (n % i == 0) cnt++;
+            }
+                return cnt == 0;
         }
 
         /// <summary>
@@ -30,7 +35,7 @@ namespace GitHubTestProject
         /// <param name="a">An integer array</param>
         public static void Sort(int[] a)
         {
-            // TODO: Complete fhe funtion
+            Array.Sort(a);
         }
 
         /// <summary>
