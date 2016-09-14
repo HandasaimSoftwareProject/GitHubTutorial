@@ -15,13 +15,16 @@ namespace GitHubTestProject
 
         /// <summary>
         /// Tests if a given number is a prime
+       
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
         public static bool IsPrime(int n)
         {
-            // TODO: Complete fhe funtion
-            return n % 2 != 0;
+            for (int i = 2; i <Math.Sqrt(n); i++)
+            {
+                if 
+            }
         }
 
         /// <summary>
@@ -30,7 +33,7 @@ namespace GitHubTestProject
         /// <param name="a">An integer array</param>
         public static void Sort(int[] a)
         {
-            // TODO: Complete fhe funtion
+            Array.Sort(a);
         }
     }
 }
