@@ -20,7 +20,7 @@ namespace GitHubTestProject
         /// <returns></returns>
         public static bool IsPrime(int n)
         {
-            for (int i = 2; i < n; i++)
+            for (int i = 2; i < Math.Sqrt(n); i++)
             {
                 if (n % i == 0)
                 {
@@ -36,18 +36,7 @@ namespace GitHubTestProject
         /// <param name="a">An integer array</param>
         public static void Sort(int[] a)
         {
-            for (int i = 0; i < a.Length; i++)
-            {
-                for (int j = 0; j < a.Length - i - 1; j++)
-                {
-                    if (a[j] > a[j+1])
-                    {
-                        int temp = a[j];
-                        a[j] = a[j+1];
-                        a[j+1] = temp;
-                    }
-                }
-            }
+            Array.Sort(a);
         }
     }
 }
