@@ -32,12 +32,12 @@ namespace GitHubProjectTests
             Assert.IsTrue(a.SequenceEqual(new int[] { 2, 4, 8, 34, 58, 153 }));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void TestCountVectors()
         {
             Assert.AreEqual(Program.CountVectors(4), 13);
             Assert.AreEqual(Program.CountVectors(8), 149);
             Assert.AreEqual(Program.CountVectors(13), 3136);
-        }
+        }*/
     }
 }
