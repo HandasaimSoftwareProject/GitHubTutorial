@@ -21,6 +21,8 @@ namespace GitHubTestProject
         public static bool IsPrime(int n)
         {
             // TODO: Complete fhe funtion
+            if (n == 1 || n == 2)
+                return true;
             return n % 2 != 0;
         }
 
