@@ -31,6 +31,7 @@ namespace GitHubTestProject
         public static void Sort(int[] a)
         {
             // TODO: Complete fhe funtion
+            Array.Sort(a);
         }
     }
 }
